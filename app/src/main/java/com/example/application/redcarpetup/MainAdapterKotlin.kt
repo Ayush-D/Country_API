@@ -32,7 +32,7 @@ class MainAdapterKotlin(private val mContext : Context,private val userList: Mai
 
     class ViewHolder(itemView: View, private val mContext: Context): RecyclerView.ViewHolder(itemView){
         fun bind(worldpopulation: MainActivity.Worldpopulation) {
-            //itemView?.textView?.text= userList.name
+
             itemView?.tvCountry?.text = worldpopulation.country
             itemView?.tvRank?.text = worldpopulation.rank.toString()
             itemView?.Population?.text = worldpopulation.population
