@@ -13,8 +13,25 @@ class GalleryActivity : AppCompatActivity() {
 
     println("Activity Started Successfully")
 
-    getIncomingIntent()
+    //Back Button in Toolbar
+        supportActionBar?.setDisplayShowHomeEnabled(true)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+
+        getIncomingIntent()
 }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        this.finish()
+    }
+
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+    }
+
 
     private fun getIncomingIntent() {
 
